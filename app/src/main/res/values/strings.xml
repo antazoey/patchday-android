@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PatchDay</string>
+    <string name="title_estrogens">Estrogens</string>
+    <string name="title_pills">Pills</string>
+    <string name="title_sites">Sites</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="DefaultSiteNames">
+        <item>Right Abdomen</item>
+        <item>Left Abdomen</item>
+        <item>Right Glute</item>
+        <item>Left Glute</item>
+        <item>Right Delt</item>
+        <item>Left Delt</item>
+        <item>Right Quad</item>
+        <item>Left Quad</item>
+    </string-array>
+</resources>
