@@ -13,7 +13,7 @@ import android.view.ViewGroup
 /**
  * A fragment representing a list of Items.
  * Activities containing this fragment MUST implement the
- * [SiteFragment.OnListFragmentInteractionListener] interface.
+ * [SiteFragment.OnSiteFragmentInteractionListener] interface.
  */
 class SiteFragment : Fragment() {
 

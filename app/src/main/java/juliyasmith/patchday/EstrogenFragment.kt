@@ -1,7 +1,9 @@
 package juliyasmith.patchday
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
@@ -9,6 +11,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_estrogen.*
 
 class EstrogenFragment : Fragment() {
 
@@ -23,6 +26,7 @@ class EstrogenFragment : Fragment() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_estrogen_list, container, false)
@@ -34,7 +38,7 @@ class EstrogenFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = EstrogenRecyclerViewAdapter(EstrogenContent.estrogens, listener)
+                adapter = EstrogenRecyclerViewAdapter(EstrogenContent(context).estrogens, listener)
             }
         }
         return view
@@ -54,27 +58,14 @@ class EstrogenFragment : Fragment() {
         listener = null
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson
-     * [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
     interface OnEstrogenFragmentInteractionListener {
         fun onEstrogenFragmentInteraction(estrogen: EstrogenContent.Estrogen?)
     }
 
+    // Specific EstrogenFragment with given column count.
     companion object {
-
-        // TODO: Customize parameter argument names
         const val ARG_COLUMN_COUNT = "column-count"
 
-        // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
                 EstrogenFragment().apply {

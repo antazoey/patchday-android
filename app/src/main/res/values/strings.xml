@@ -5,14 +5,40 @@
     <string name="title_sites">Sites</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string-array name="DefaultSiteNames">
-        <item>Right Abdomen</item>
-        <item>Left Abdomen</item>
-        <item>Right Glute</item>
-        <item>Left Glute</item>
-        <item>Right Delt</item>
-        <item>Left Delt</item>
-        <item>Right Quad</item>
-        <item>Left Quad</item>
-    </string-array>
+    <!-- Titles -->
+    <string name="estrogenTitle_p">Patches</string>
+    <string name="estrogenTitle_i">Injections</string>
+    <string name="pillTitle">Pills</string>
+    <string name="siteTitle">Sites</string>
+    <string name="settingsTitle">Settings</string>
+
+    <!-- Colon strings -->
+    <string name="deliverMethod_c">Delivery Method: </string>
+    <string name="schedule_c">Schedule: </string>
+    <string name="count_c">Count: </string>
+    <string name="notifications_c">Notifications: </string>
+    <string name="minutes_prior_c">Minutes prior: </string>
+
+    <!-- Schedules -->
+    <string name="once_a_week">Once a week</string>
+    <string name="twice_a_week">Twice a week</string>
+    <string name="every_two_weeks">Every two weeks</string>
+
+    <!-- Numbers -->
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="sixty">60</string>
+    <string name="onetwenty">120</string>
+
+    <!-- Descriptions -->
+    <string name="ic_patchinj_d">Patch/Injection Icon</string>
+    <string name="ic_calendar_d">Calendar Icon</string>
+    <string name="ic_count_d">123 Icon</string>
+    <string name="ic_notification_d">Notification Icon</string>
+    <string name="ic_clock_d">Clock Icon</string>
+
+
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="DefaultSiteNames">
+        <item>Right Abdomen</item>
+        <item>Left Abdomen</item>
+        <item>Right Glute</item>
+        <item>Left Glute</item>
+        <item>Right Delt</item>
+        <item>Left Delt</item>
+        <item>Right Quad</item>
+        <item>Left Quad</item>
+    </string-array>
+
+    <string-array name="DeliveryMethods">
+        <item>Patches</item>
+        <item>Injections</item>
+    </string-array>
+
+    <string-array name="PlaceHolders">
+        <item>No date</item>
+    </string-array>
+
+</resources>

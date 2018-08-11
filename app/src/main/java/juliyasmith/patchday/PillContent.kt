@@ -3,32 +3,30 @@ package juliyasmith.patchday
 import java.util.*
 import kotlin.collections.ArrayList
 
+typealias Time = Date
+
 object PillContent {
 
     val pills: MutableList<Pill> = ArrayList()
-    val pill_map: MutableMap<UUID, Pill> = HashMap()
+
+    data class Pill(var name: String="New Pill", var time1: Time=Time(), var time2: Time?=null,
+                    var times_a_day: Int=1, var notify: Boolean=true, var timesTakenToday: Int=0) {
+        override fun toString(): String = name
+    }
 
     init {
         for (i in 0..3) {
-            val id = UUID.randomUUID()
-            val pill = Pill(id)
-            pills.add(pill)
-            pill_map[id] = pill
+            val pill = createPill()
+            addPill(pill)
         }
+    }
+
+    private fun createPill(): Pill {
+        return Pill()
     }
 
     private fun addPill(pill: Pill) {
         pills.add(pill)
-        pill_map[pill.id] = pill
-    }
-
-    private fun createPill(id: UUID): Pill {
-        return Pill(id)
-    }
-
-    data class Pill(val id: UUID, val date: Date? = null,
-                    val siteID: UUID? = null, val backupSiteName: String? = null) {
-        override fun toString(): String = "Pill"
     }
 
 }

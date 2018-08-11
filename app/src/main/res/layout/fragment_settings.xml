@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="32dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginEnd="16dp"
+    android:orientation="vertical"
+    tools:context=".SettingsFragment">
+
+    <!-- Delivery Method -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        tools:context=".SettingsFragment">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:gravity="center"
+            android:contentDescription="@string/ic_clock_d"
+            app:srcCompat="@drawable/patchinj_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/deliverMethod_c"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/deliveryMethod_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/estrogenTitle_p"
+            android:textColor="@android:color/holo_blue_light" />
+
+    </LinearLayout>
+
+    <View
+        android:background="#eaeaea"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:gravity="center"/>
+
+    <!-- Schedule -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        tools:context=".SettingsFragment">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:clickable="false"
+            android:contentDescription="@string/ic_calendar_d"
+            app:srcCompat="@drawable/calendar_icon" />
+
+        <TextView
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/schedule_c"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/e_schedule_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/twice_a_week"
+            android:textColor="@android:color/holo_blue_light" />
+
+    </LinearLayout>
+
+
+    <View
+        android:background="#eaeaea"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:gravity="center"/>
+
+    <!-- Count -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        tools:context=".SettingsFragment">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:clickable="false"
+            android:contentDescription="@string/ic_clock_d"
+            app:srcCompat="@drawable/count_icon" />
+
+        <TextView
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/count_c"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/three"
+            android:textColor="@android:color/holo_blue_light" />
+
+    </LinearLayout>
+
+    <View
+        android:background="#eaeaea"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:gravity="center"/>
+
+    <!-- Notifications -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        tools:context=".SettingsFragment">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:clickable="false"
+            android:contentDescription="@string/ic_notification_d"
+            app:srcCompat="@drawable/notify_icon" />
+
+        <TextView
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/notifications_c"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/e_notification_switch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <View
+        android:background="#eaeaea"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:gravity="center"/>
+
+    <!-- Minutes Prior -->
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        tools:context=".SettingsFragment">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:clickable="false"
+            android:contentDescription="@string/ic_clock_d"
+            app:srcCompat="@drawable/time_icon" />
+
+        <TextView
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/minutes_prior_c"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <SeekBar
+        android:id="@+id/en_minutesPrior_sb"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/pdPink"
+        android:layout_height="70dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        tools:context=".SettingsFragment">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/zero"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sixty"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/onetwenty"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

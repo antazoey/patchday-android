@@ -1,34 +1,52 @@
 package juliyasmith.patchday
 
+import android.content.Context
 import java.util.*
 import kotlin.collections.ArrayList
 
-object EstrogenContent {
+class EstrogenContent(context: Context) {
 
+    val context = context
     val estrogens: MutableList<Estrogen> = ArrayList()
-    val estrogen_map: MutableMap<UUID, Estrogen> = HashMap()
+
+    data class Estrogen(var context: Context, var i: Int,
+                        var date: Date?=null,
+                        var sitePtr: SiteContent.Site?=null,
+                        var backupSiteName: String?=null) {
+        override fun toString(): String = "$i Estrogen at date: ${DateHelper(context).formatDate(date)}"
+    }
 
     init {
-        for (i in 0..3) {
-            val id = UUID.randomUUID()
-            val estrogen = Estrogen(id)
-            estrogens.add(estrogen)
-            estrogen_map[id] = estrogen
+        for (i in 0..SettingsContent.estrogenCount) {
+            val estrogen = createEstrogen(i)
+            addEstrogen(estrogen)
         }
     }
 
+    // Public
+
+    fun getEstrogen(index: Int): Estrogen? {
+        if (index >= 0 && index < estrogens.size) {
+            return estrogens[index]
+        }
+        return null
+    }
+
+    fun setEstrogenDate(index: Int, newDate: Date) {
+        getEstrogen(index)?.date = newDate
+    }
+
+    fun setEstrogenSite(index: Int, newSite: SiteContent.Site) {
+        getEstrogen(index)?.sitePtr = newSite
+    }
+
+    // Private
+
     private fun addEstrogen(estrogen: Estrogen) {
         estrogens.add(estrogen)
-        estrogen_map[estrogen.id] = estrogen
     }
 
-    private fun createEstrogen(id: UUID): Estrogen {
-        return Estrogen(id)
+    private fun createEstrogen(index: Int): Estrogen {
+        return Estrogen(context, index)
     }
-
-    data class Estrogen(val id: UUID, val date: Date?=null,
-                        val siteID: UUID?=null, val backupSiteName: String?=null) {
-        override fun toString(): String = "Estrogen"
-    }
-
 }
