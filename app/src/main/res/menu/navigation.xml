@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_estrogens"
-        android:icon="@drawable/patch_icon"
+        android:icon="@drawable/ic_patch"
         android:title="@string/title_estrogens" />
 
     <item
         android:id="@+id/navigation_pills"
-        android:icon="@drawable/pill_icon"
+        android:icon="@drawable/ic_pill"
         android:title="@string/title_pills" />
 
     <item
         android:id="@+id/navigation_sites"
-        android:icon="@drawable/site_icon"
+        android:icon="@drawable/ic_site"
         android:title="@string/title_sites" />
 
 </menu>

@@ -7,8 +7,8 @@
     android:layout_marginTop="32dp"
     android:layout_marginLeft="16dp"
     android:layout_marginStart="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginEnd="16dp"
+    android:layout_marginRight="32dp"
+    android:layout_marginEnd="32dp"
     android:orientation="vertical"
     tools:context=".SettingsFragment">
 
@@ -26,25 +26,27 @@
             android:clickable="false"
             android:gravity="center"
             android:contentDescription="@string/ic_clock_d"
-            app:srcCompat="@drawable/patchinj_icon" />
+            app:srcCompat="@drawable/ic_patchinj" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="126dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="start|center"
             android:text="@string/deliverMethod_c"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/deliveryMethod_button"
+            android:id="@+id/b_deliveryMethod"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="40dp"
             android:layout_marginStart="40dp"
             android:layout_weight="1"
             android:background="@null"
-            android:gravity="center"
+            android:gravity="end|center"
             android:text="@string/estrogenTitle_p"
             android:textColor="@android:color/holo_blue_light" />
 
@@ -77,7 +79,7 @@
         <TextView
             android:layout_width="126dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="start|center"
             android:text="@string/schedule_c"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -90,7 +92,7 @@
             android:layout_marginStart="40dp"
             android:layout_weight="1"
             android:background="@null"
-            android:gravity="center"
+            android:gravity="end|center"
             android:text="@string/twice_a_week"
             android:textColor="@android:color/holo_blue_light" />
 
@@ -124,7 +126,7 @@
         <TextView
             android:layout_width="126dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="start|center"
             android:text="@string/count_c"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -137,7 +139,7 @@
             android:layout_marginStart="40dp"
             android:layout_weight="1"
             android:background="@null"
-            android:gravity="center"
+            android:gravity="end|center"
             android:text="@string/three"
             android:textColor="@android:color/holo_blue_light" />
 
@@ -165,12 +167,12 @@
             android:gravity="center"
             android:clickable="false"
             android:contentDescription="@string/ic_notification_d"
-            app:srcCompat="@drawable/notify_icon" />
+            app:srcCompat="@drawable/ic_notifications" />
 
         <TextView
             android:layout_width="126dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="start|center"
             android:text="@string/notifications_c"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -182,7 +184,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="40dp"
             android:layout_marginStart="40dp"
-            android:gravity="center" />
+            android:gravity="end|center" />
 
     </LinearLayout>
 
@@ -193,7 +195,6 @@
         android:gravity="center"/>
 
     <!-- Minutes Prior -->
-
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -209,22 +210,24 @@
             android:gravity="center"
             android:clickable="false"
             android:contentDescription="@string/ic_clock_d"
-            app:srcCompat="@drawable/time_icon" />
+            app:srcCompat="@drawable/ic_time" />
 
         <TextView
             android:layout_width="126dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="start|center"
             android:text="@string/minutes_prior_c"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/tv_minutesPriorValue"
             android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_marginLeft="40dp"
             android:layout_marginStart="40dp"
-            android:gravity="center"
+            android:gravity="end|center"
             android:text="@string/zero"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -236,6 +239,10 @@
         android:id="@+id/en_minutesPrior_sb"
         android:layout_width="match_parent"
         android:backgroundTint="@color/pdPink"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginEnd="50dp"
         android:layout_height="70dp" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -243,10 +250,10 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp"
         android:orientation="horizontal"
         tools:context=".SettingsFragment">
 

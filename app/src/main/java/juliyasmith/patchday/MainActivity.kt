@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v4.app.Fragment
 import android.view.Menu
 import android.view.MenuItem
+import kotlinx.android.synthetic.main.fragment_settings.*
 
 class MainActivity : AppCompatActivity(), EstrogenFragment.OnEstrogenFragmentInteractionListener,
         PillFragment.OnPillFragmentInteractionListener,
@@ -56,29 +57,32 @@ class MainActivity : AppCompatActivity(), EstrogenFragment.OnEstrogenFragmentInt
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        loadFragment(SettingsFragment())
+        when(item?.itemId) {
+           R.id.action_settings -> loadFragment(SettingsFragment.newInstance())
+        }
         return true
     }
 
     override fun onEstrogenFragmentInteraction(estrogen: EstrogenContent.Estrogen?) {
         loadFragment(EditEstrogenFragment())
-        println(estrogen.toString())
     }
 
     override fun onEditEstrogenFragmentInteraction(uri: Uri) {
 
     }
 
-    override fun onSettingsFragmentInteraction(uri: Uri) {
-
-    }
-
     override fun onPillFragmentInteraction(pill: PillContent.Pill?) {
-        println(pill.toString())
+
     }
 
     override fun onSiteFragmentInteraction(site: SiteContent.Site?) {
-        println(site.toString())
+
+    }
+
+    // Settings
+
+    override fun onMinutesPriorSeekBarSlid(newValue: Double) {
+        print("new value = $newValue")
     }
 
 }
